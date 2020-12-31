@@ -98,6 +98,11 @@ import java.text.SimpleDateFormat;
 public class ExceptionsDemo{
     public static void show() {
         var account = new Account();
-        account.deposit(-1);
+        try {
+            account.deposit(-1);    
+        } catch (Exception e) {
+            //TODO: handle exception
+            e.printStackTrace();
+        }
     }
 }
