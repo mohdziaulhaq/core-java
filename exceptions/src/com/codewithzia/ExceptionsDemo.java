@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-
 // public class ExceptionsDemo {
 //     public static void show(){
 //         sayHello(null);
@@ -17,7 +16,6 @@ import java.text.SimpleDateFormat;
 //     }
 // }
 
-
 //FileNotFoundException
 // public class ExceptionsDemo {
 //     public static void show(){
@@ -25,7 +23,6 @@ import java.text.SimpleDateFormat;
 
 //     }
 // }
-
 
 //try and catch
 // public class ExceptionsDemo {
@@ -39,7 +36,6 @@ import java.text.SimpleDateFormat;
 //         }
 //     }
 // }
-
 
 // public class ExceptionsDemo{
 //     public static void show(){
@@ -56,7 +52,6 @@ import java.text.SimpleDateFormat;
 //     }
 // }
 
-
 //try-catch-finally
 // public class ExceptionsDemo{
 //     public static void show(){
@@ -67,7 +62,7 @@ import java.text.SimpleDateFormat;
 //         }
 //         catch (IOException e) {
 //             System.out.println("Could not read data");
-        
+
 //         }finally{
 //             if(reader != null){
 //                 try {
@@ -80,7 +75,6 @@ import java.text.SimpleDateFormat;
 //         }
 //     }
 // }
-
 
 //try with resources
 // public class ExceptionsDemo{
@@ -97,16 +91,26 @@ import java.text.SimpleDateFormat;
 //     }
 // }
 
-
 //throw an exception
-public class ExceptionsDemo{
-    public static void show() throws IOException{
+// public class ExceptionsDemo{
+//     public static void show() throws IOException{
+//         var account = new Account();
+//         try {
+//             account.deposit(-1);    
+//         } catch (Exception e) {
+//             System.out.println("Logging");
+//             throw e;
+//         }
+//     }
+// }
+
+public class ExceptionsDemo {
+    public static void show() {
         var account = new Account();
         try {
-            account.deposit(-1);    
-        } catch (Exception e) {
-            System.out.println("Logging");
-            throw e;
+            account.withdraw(10);
+        } catch (InsufficientFundsException e) {
+            System.out.println(e.getMessage());
         }
     }
 }
