@@ -10,9 +10,10 @@ public class QueueDemo {
         queue.add("a");
         queue.add("b");
         // b -> a -> c
-        var front = queue.peek();
+        // var front = queue.peek();
+        // var front = queue.remove();
+        var front = queue.poll();
         System.out.println(front);
-
-
+        System.out.println(queue);
     }
 }
