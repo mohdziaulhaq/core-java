@@ -17,7 +17,9 @@ public class App {
         // System.out.println(customers);
 
         // QueueDemo.show();
+        // SetDemo.show();
 
+        MapDemo.show();
     }
 }
 
